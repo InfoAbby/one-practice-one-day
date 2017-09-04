@@ -28,10 +28,11 @@ if __name__ == '__main__':
     print(generate(10))
     for g in generate(10):
         sql = "INSERT INTO p0001(code) VALUES ('%s')" % g
-    try:
-        cursor.execute(sql)
-        db.commit()
-    except:
-        db.rollback()
+        try:
+            cursor.execute(sql)
+            db.commit()
+        except:
+            db.rollback()
+
     db.close()
 
