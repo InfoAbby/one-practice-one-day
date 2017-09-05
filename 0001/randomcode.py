@@ -1,5 +1,6 @@
 import random
 import string
+import redis
 from sqlalchemy import Column,String,create_engine
 import pymysql.cursors
 from config import config
